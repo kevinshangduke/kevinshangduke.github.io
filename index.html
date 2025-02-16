@@ -82,7 +82,12 @@
     h2 {
       margin-bottom: 10px;
     }
-    ul.publications,
+    ol.publications,
+    ul.publications,{
+  list-style: decimal outside; /* changed from 'inside' to 'outside' */
+  margin-left: 40px;           /* more left margin so numbers don't spill over */
+  padding-left: 0;             /* optional; keeps the numbers neatly aligned */
+}
     ul.teaching,
     ul.services,
     ul.honors,
