@@ -1,11 +1,188 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>My GitHub Page</title>
-  </head>
-  <body>
-    <h1>Hello from GitHub Pages!</h1>
-    <p>This is my new GitHub Pages site.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Homepage</title>
+  <style>
+    /* 1. RESET / BASIC STYLES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex; /* We’ll use a flex container to create side-by-side columns */
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* 2. LEFT PANEL (SIDEBAR) */
+    .left-panel {
+      width: 250px; /* Adjust this width as needed */
+      background-color: #f7f7f7;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+    }
+    .photo-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .photo-container img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .job-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .affiliation {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .nav-links li {
+      margin: 8px 0;
+    }
+    .nav-links li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .nav-links li a:hover {
+      color: #007acc;
+    }
+
+    /* 3. RIGHT PANEL (MAIN CONTENT) */
+    .right-panel {
+      flex: 1; /* This panel will expand to fill remaining space */
+      padding: 20px;
+    }
+
+    /* We'll create separate sections for each of the categories */
+    .section {
+      display: none; /* Hide all sections by default */
+    }
+    .section.active {
+      display: block; /* Only the "active" section should be visible */
+    }
+
+    /* 4. STYLE HEADINGS AND LISTS */
+    h2 {
+      margin-bottom: 10px;
+    }
+    ul.publications,
+    ul.teaching,
+    ul.services,
+    ul.honors,
+    ul.misc {
+      list-style: decimal inside; /* Numbered lists */
+      margin-left: 20px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- LEFT PANEL -->
+  <div class="left-panel">
+    <div class="photo-container">
+      <!-- Replace the src value with the URL of your photo -->
+      <img src="https://via.placeholder.com/150" alt="Profile Photo" />
+    </div>
+    <div class="job-title">Your Job Title</div>
+    <div class="affiliation">Your Affiliation</div>
+
+    <ul class="nav-links">
+      <li><a href="#" onclick="showSection('research')">Research</a></li>
+      <li><a href="#" onclick="showSection('teaching')">Teaching</a></li>
+      <li><a href="#" onclick="showSection('services')">Services</a></li>
+      <li><a href="#" onclick="showSection('honors')">Honors</a></li>
+      <li><a href="#" onclick="showSection('misc')">Miscellaneous</a></li>
+    </ul>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right-panel">
+    <!-- RESEARCH SECTION -->
+    <div id="research" class="section active">
+      <h2>Research</h2>
+      <ul class="publications">
+        <li>Paper 1: Title, Journal/Conference, Year</li>
+        <li>Paper 2: Title, Journal/Conference, Year</li>
+        <li>Paper 3: Title, Journal/Conference, Year</li>
+        <!-- Add more as needed -->
+      </ul>
+    </div>
+
+    <!-- TEACHING SECTION -->
+    <div id="teaching" class="section">
+      <h2>Teaching</h2>
+      <ul class="teaching">
+        <li>Course 1: Semester, Year</li>
+        <li>Course 2: Semester, Year</li>
+        <li>Course 3: Semester, Year</li>
+        <!-- Add more as needed -->
+      </ul>
+    </div>
+
+    <!-- SERVICES SECTION -->
+    <div id="services" class="section">
+      <h2>Services</h2>
+      <ul class="services">
+        <li>Service role #1</li>
+        <li>Service role #2</li>
+        <!-- Add more as needed -->
+      </ul>
+    </div>
+
+    <!-- HONORS SECTION -->
+    <div id="honors" class="section">
+      <h2>Honors</h2>
+      <ul class="honors">
+        <li>Honor 1</li>
+        <li>Honor 2</li>
+        <!-- Add more as needed -->
+      </ul>
+    </div>
+
+    <!-- MISCELLANEOUS SECTION -->
+    <div id="misc" class="section">
+      <h2>Miscellaneous</h2>
+      <ul class="misc">
+        <li>Additional info #1</li>
+        <li>Additional info #2</li>
+        <!-- Add more as needed -->
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to switch between sections
+    function showSection(sectionId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('.section');
+      sections.forEach((sec) => {
+        sec.classList.remove('active');
+      });
+
+      // Show the selected section
+      const targetSection = document.getElementById(sectionId);
+      if (targetSection) {
+        targetSection.classList.add('active');
+      }
+    }
+  </script>
+</body>
 </html>
