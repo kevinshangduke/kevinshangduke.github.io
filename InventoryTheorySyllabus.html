@@ -7554,10 +7554,10 @@ a.anchor-link {
 <h2 id="Class-Schedule"><a id="Class-Schedule"></a>Class Schedule<a class="anchor-link" href="#Class-Schedule">¶</a></h2><ul>
 <li><strong><a href="#Class-1">Class 1 (8/29): Introduction</a></strong></li>
 <li><strong><a href="#Class-2">Class 2 (9/5): Determinisitc Demand Systems</a></strong></li>
-<li><strong><a href="#Class-3">Class 3 (9/12): Single-Stage Systems Without Fixed Order Costs</a></strong></li>
-<li><strong><a href="#Class-4">Class 4 (9/19): Single-Stage Systems With Fixed Order Costs</a></strong></li>
-<li><strong><a href="#Class-5">Class 5 (9/26): Serial Systems Without Fixed Order Costs</a></strong></li>
-<li><strong><a href="#Class-6">Class 6 (10/3): Serial Systems With Fixed Order Costs: Bounds and Approximations</a></strong></li>
+<li><strong><a href="#Class-3">Class 3 (9/12): Single-Stage Systems: Finite-Horizon Models</a></strong></li>
+<li><strong><a href="#Class-4">Class 4 (9/19): Single-Stage Systems: Infinite-Horizon Models</a></strong></li>
+<li><strong><a href="#Class-5">Class 5 (9/26): Serial Systems: Finite-Horizon Models</a></strong></li>
+<li><strong><a href="#Class-6">Class 6 (10/3): Serial Systems: Infinite-Horizon Models</a></strong></li>
 <li><strong><a href="#Class-7">Class 7 (10/17): Distribution Systems</a></strong></li>
 <li><strong><a href="#Class-8">Class 8 (10/24): Inventory Systems with Financial Flows</a></strong></li>
 <li><strong><a href="#Class-9">Class 9 (10/31): Data-Driven Inventory Models: Offline (Supervised) Learning</a></strong></li>
@@ -7624,17 +7624,20 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Class-3:-Single-Stage-Systems-Without-Fixed-Order-Costs"><a id="Class-3"></a>Class 3: Single-Stage Systems Without Fixed Order Costs<a class="anchor-link" href="#Class-3:-Single-Stage-Systems-Without-Fixed-Order-Costs">¶</a></h3><ul>
-<li>Finite-horizon model</li>
-<li>Infinite-horizon model: Base-stock policy</li>
+<h3 id="Class-3:-Single-Stage-Systems:-Finite-Horizon-Models"><a id="Class-3"></a>Class 3: Single-Stage Systems: Finite-Horizon Models<a class="anchor-link" href="#Class-3:-Single-Stage-Systems:-Finite-Horizon-Models">¶</a></h3><ul>
+<li>Single-stage system without fixed order costs</li>
+<li>Single-stage system with fixed order costs</li>
 <li>Myopic policies</li>
-<li>Lost sales model: Known demand distribution</li>
+<li>Markov-modulated demand model</li>
+<li>Lost sales system</li>
 </ul>
 <p><strong>Readings:</strong></p>
 <ul>
 <li>Section 2 of Clark, A. and H. Scarf. 1960. Optimal policies for a multi-echelon inventory problem. Management Science 6 475-490.</li>
 <li>[Zipkin] 9.1-9.6</li>
+<li>[Porteus] 4.2, 7.1</li>
 <li>Iglehart, D., S. Karlin. 1962. Optimal policy for dynamic inventory process with nonstationary stochastic demands. Chapter 8 in K. Arrow, S. Karlin, H. Scarf (eds.), Studies in Applied Probability and Management Science, Stanford, CA.</li>
+<li>Zipkin, P. 2008. On the structure of lost-sales inventory models. Operations Research 56 937-944.</li>
 </ul>
 <p><a href="#Class-Schedule">Back to schedule</a></p>
 <hr/>
@@ -7648,14 +7651,15 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Class-4:-Single-Stage-Systems-With-Fixed-Order-Costs"><a id="Class-4"></a>Class 4: Single-Stage Systems With Fixed Order Costs<a class="anchor-link" href="#Class-4:-Single-Stage-Systems-With-Fixed-Order-Costs">¶</a></h3><ul>
-<li>Finite-horizon model: (s,S) policies, Markov modulated demand</li>
-<li>Infinite-horizon model: (r,Q) policies</li>
+<h3 id="Class-4:-Single-Stage-Systems:-Infinite-Horizon-Models"><a id="Class-4"></a>Class 4: Single-Stage Systems: Infinite-Horizon Models<a class="anchor-link" href="#Class-4:-Single-Stage-Systems:-Infinite-Horizon-Models">¶</a></h3><ul>
+<li>Base-stock policies</li>
+<li>(r,Q) policies</li>
+<li>(s,S) policies</li>
 </ul>
 <p><strong>Readings:</strong></p>
 <ul>
 <li>[Zipkin] 6.2.3-6.2.5; 6.4-6.6</li>
-<li>[Porteus] 4.2, 7.1</li>
+<li>Zheng, Y., A. Federgruen. 1991. Finding optimal (s,S) policies is about as simple as evaluating a single policy. Operations Research 39 654-665.</li>
 <li>Zheng, Y. S. 1992. On properties of stochastic inventory systems. Management Science 38 87–103.</li>
 </ul>
 <p><a href="#Class-Schedule">Back to schedule</a></p>
@@ -7670,14 +7674,15 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Class-5:-Serial-Systems-Without-Fixed-Order-Costs"><a id="Class-5"></a>Class 5: Serial Systems Without Fixed Order Costs<a class="anchor-link" href="#Class-5:-Serial-Systems-Without-Fixed-Order-Costs">¶</a></h3><ul>
-<li>Finite-horizon model</li>
-<li>Infinite-horizon model</li>
+<h3 id="Class-5:-Serial-Systems:-Finite-Horizon-Models"><a id="Class-5"></a>Class 5: Serial Systems: Finite-Horizon Models<a class="anchor-link" href="#Class-5:-Serial-Systems:-Finite-Horizon-Models">¶</a></h3><ul>
+<li>Finite-horizon model without fixed ordering costs</li>
+<li>Finite-horizon model with fixed ordering costs</li>
+<li>Lost-sales system</li>
 </ul>
 <p><strong>Readings:</strong></p>
 <ul>
 <li>Clark, A. and H. Scarf. 1960. Optimal policies for a multi-echelon inventory problem. Management Science 6 475-490.</li>
-<li>Chen, F. 1999. Decentralized supply chains subject to information delays. Management Science 45 1076–1090.</li>
+<li>Shang, K. 2012. Single-stage approximations for optimal policies in serial inventory systems with non-stationary demand. Manufacturing &amp; Service Operations Management 14 414-422.</li>
 <li>Huh, W.T., G. Janakiraman. 2010. On the structure of serial inventory systems with lost sales. Operations Research 58(2) 486-491.</li>
 <li>[Zipkin] 8.1-8.3.3</li>
 </ul>
@@ -7693,14 +7698,15 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Class-6:-Serial-Systems-With-Fixed-Order-Costs:-Bounds-and-Approximations"><a id="Class-6"></a>Class 6: Serial Systems With Fixed Order Costs: Bounds and Approximations<a class="anchor-link" href="#Class-6:-Serial-Systems-With-Fixed-Order-Costs:-Bounds-and-Approximations">¶</a></h3><ul>
-<li>Infinite-horizon model: Base-stock policies</li>
-<li>Infinite-horizon model: (r,Q) policies</li>
-<li>Infinite-horizon model: (s,T) policies</li>
-<li>Lower bounds</li>
+<h3 id="Class-6:-Serial-Systems:-Infinite-Horizon-Models"><a id="Class-6"></a>Class 6: Serial Systems: Infinite-Horizon Models<a class="anchor-link" href="#Class-6:-Serial-Systems:-Infinite-Horizon-Models">¶</a></h3><ul>
+<li>Echelon and local base-stock policies</li>
+<li>Echelon and local (r,Q) policies</li>
+<li>Echelon and local (s,T) policies</li>
+<li>Lower bounds, heuristics, and approximations</li>
 </ul>
 <p><strong>Readings:</strong></p>
 <ul>
+<li>Chen, F. 1999. Decentralized supply chains subject to information delays. Management Science 45 1076-1090.</li>
 <li>Shang, K., J.-S. Song. 2007. Supply chains with economies of scale: Bounds and approximations. Operations Research 55 843 -853.</li>
 <li>Shang, K., S. Zhou. 2010. Optimal and heuristic echelon (r,nQ,T) policies in serial inventory systems with fixed costs. Operations Research 58 414-427.</li>
 <li>Shang, K., J.-S. Song. 2003. Newsvendor bounds and heuristic for optimal inventory policies in serial supply chains. Management Science 49 618-638.</li>
@@ -7708,7 +7714,7 @@ a.anchor-link {
 <li>Shang, K., S. Zhou. 2010. Optimal and heuristic echelon (r,nQ,T) policies in serial inventory systems with fixed costs. Operations Research 58 414-427.</li>
 <li>Chen, F., Y.-S. Zheng. 1994. Lower bounds for multi-echelon stochastic inventory systems. Operations Research 40 1426-1443.</li>
 <li>Shang, K., S. Zhou. 2009. A simple heuristic for echelon (r,nQ,T) policies in serial supply chains. Operations Research Letters 37 433-437.</li>
-<li>Shang, K. 2012. Single-stage approximations for optimal policies in serial inventory systems with non-stationary demand. Manufacturing &amp; Service Operations Management 14 414-422.</li>
+<li>Shang, K., S. Zhou, G.-J. van Houtum. 2010. Improving supply chain performance: real-time demand information and flexible deliveries. Manufacturing &amp; Service Operations Management 12 430-448.</li>
 </ul>
 <p><a href="#Class-Schedule">Back to schedule</a></p>
 <hr/>
